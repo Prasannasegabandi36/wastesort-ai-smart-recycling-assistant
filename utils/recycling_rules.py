@@ -23,10 +23,32 @@ DEFAULT_RULE = {
 def load_rules(path: Path | str = RULES_PATH) -> pd.DataFrame:
     """Load the waste disposal rule table."""
     path = Path(path)
+
     if not path.exists():
         return pd.DataFrame([DEFAULT_RULE])
-    rules = pd.read_csv(path)
+
+    rules = pd.read_csv(path, encoding="utf-8-sig")
+
+    required_columns = {
+        "class_name",
+        "display_name",
+        "category",
+        "bin_type",
+        "action",
+        "tip",
+        "journey",
+        "points",
+        "warning",
+        "color_tag",
+    }
+
+    missing_columns = required_columns - set(rules.columns)
+    if missing_columns:
+        raise ValueError(f"waste_rules.csv is missing columns: {sorted(missing_columns)}")
+
     rules["class_name"] = rules["class_name"].astype(str).str.lower().str.strip()
+    rules["points"] = pd.to_numeric(rules["points"], errors="coerce").fillna(0).astype(int)
+
     return rules
 
 
@@ -37,6 +59,7 @@ def get_rule(class_name: str, rules: pd.DataFrame | None = None) -> dict:
 
     class_name = str(class_name).lower().strip()
     matched = rules[rules["class_name"] == class_name]
+
     if matched.empty:
         return DEFAULT_RULE.copy()
 
@@ -48,4 +71,5 @@ def get_rule(class_name: str, rules: pd.DataFrame | None = None) -> dict:
 def get_unique_categories(rules: pd.DataFrame | None = None) -> list[str]:
     if rules is None:
         rules = load_rules()
+
     return sorted(rules["category"].dropna().unique().tolist())
