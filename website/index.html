@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>WasteSort AI | Smart Waste Sorting & Recycling Assistant</title>
+
+  <meta
+    name="description"
+    content="WasteSort AI is an AI-powered smart waste sorting and recycling assistant that helps users scan waste, identify categories, recommend bins, and track eco impact."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">♻️</span>
+      <span>WasteSort AI</span>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#impact">Impact</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="badge">AI + Sustainability + Smart Recycling</p>
+
+        <h1>
+          WasteSort AI
+          <span>Smart Waste Sorting Assistant</span>
+        </h1>
+
+        <p class="hero-text">
+          Scan waste items, identify the correct category, get bin recommendations,
+          learn recycling tips, and track your eco impact through an intelligent
+          green dashboard.
+        </p>
+
+        <div class="hero-buttons">
+          <a
+            href="https://wastesort-ai-smart-recycling.streamlit.app/"
+            target="_blank"
+            class="primary-btn"
+          >
+            Launch AI Scanner
+          </a>
+
+          <a href="#pipeline" class="secondary-btn">
+            View Pipeline
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <h3>12+</h3>
+            <p>Waste Classes</p>
+          </div>
+          <div>
+            <h3>AI</h3>
+            <p>Image Scanner</p>
+          </div>
+          <div>
+            <h3>Eco</h3>
+            <p>Impact Tracker</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="planet-card">
+          <div class="glow"></div>
+          <div class="earth">🌍</div>
+          <h2>Scan → Sort → Recycle</h2>
+          <p>Making waste management smarter for campuses and cities.</p>
+
+          <div class="bin-row">
+            <div class="bin green-bin">Wet</div>
+            <div class="bin blue-bin">Dry</div>
+            <div class="bin red-bin">Hazard</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM SECTION -->
+    <section class="section problem-section">
+      <div class="section-title">
+        <p class="badge">Why WasteSort AI?</p>
+        <h2>Waste sorting is simple, but people still get confused.</h2>
+        <p>
+          Many recyclable items go to landfills because users do not know whether
+          an item belongs to dry waste, wet waste, recyclable waste, or hazardous waste.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <span>🗑️</span>
+          <h3>Wrong Bin Usage</h3>
+          <p>People often mix plastic, food waste, paper, and batteries in the same bin.</p>
+        </div>
+
+        <div class="problem-card">
+          <span>⚠️</span>
+          <h3>Hazardous Risk</h3>
+          <p>Batteries and e-waste can harm the environment if disposed incorrectly.</p>
+        </div>
+
+        <div class="problem-card">
+          <span>📉</span>
+          <h3>Low Recycling Awareness</h3>
+          <p>Users need simple disposal guidance, not complicated waste rules.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="section" id="features">
+      <div class="section-title">
+        <p class="badge">Core Features</p>
+        <h2>Designed like a real green-tech product</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <h3>AI Waste Scanner</h3>
+          <p>Upload or capture a waste image and classify it using AI-powered prediction.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">♻️</div>
+          <h3>Smart Bin Recommendation</h3>
+          <p>Get the correct bin suggestion such as dry, wet, recyclable, or hazardous.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💡</div>
+          <h3>Recycling Guidance</h3>
+          <p>Shows simple disposal actions like rinse, flatten, donate, compost, or recycle.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌱</div>
+          <h3>Eco Points</h3>
+          <p>Rewards users with green points for correct disposal and sustainable choices.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Green Dashboard</h3>
+          <p>Visualizes scanned waste, category distribution, points, and eco progress.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏫</div>
+          <h3>Campus Use Case</h3>
+          <p>Useful for hostels, colleges, schools, offices, and smart city awareness programs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIPELINE SECTION -->
+    <section class="section pipeline-section" id="pipeline">
+      <div class="section-title">
+        <p class="badge">Project Pipeline</p>
+        <h2>Scan → Sort → Suggest → Save → Sustain</h2>
+        <p>
+          WasteSort AI follows a complete AI product pipeline from image input
+          to eco impact dashboard.
+        </p>
+      </div>
+
+      <div class="pipeline">
+        <div class="pipeline-step">
+          <span>01</span>
+          <h3>Waste Image Input</h3>
+          <p>User uploads or captures a waste item image.</p>
+        </div>
+
+        <div class="pipeline-arrow">↓</div>
+
+        <div class="pipeline-step">
+          <span>02</span>
+          <h3>AI Classification</h3>
+          <p>The image is processed and classified into waste categories.</p>
+        </div>
+
+        <div class="pipeline-arrow">↓</div>
+
+        <div class="pipeline-step">
+          <span>03</span>
+          <h3>Bin Recommendation</h3>
+          <p>The system suggests the correct bin and disposal action.</p>
+        </div>
+
+        <div class="pipeline-arrow">↓</div>
+
+        <div class="pipeline-step">
+          <span>04</span>
+          <h3>Eco Points</h3>
+          <p>Green points are calculated based on the waste category.</p>
+        </div>
+
+        <div class="pipeline-arrow">↓</div>
+
+        <div class="pipeline-step">
+          <span>05</span>
+          <h3>Dashboard Analytics</h3>
+          <p>Scan history and environmental impact are visualized.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD PREVIEW -->
+    <section class="section dashboard-section" id="dashboard">
+      <div class="dashboard-content">
+        <div>
+          <p class="badge">Dashboard Preview</p>
+          <h2>Innovative greenery dashboard for eco tracking</h2>
+          <p>
+            The dashboard helps users understand their waste behavior and encourages
+            better recycling habits through data visualization.
+          </p>
+
+          <ul class="check-list">
+            <li>Total scanned items</li>
+            <li>Recyclable vs organic vs hazardous waste</li>
+            <li>Eco points and green badge</li>
+            <li>Campus-level sustainability insights</li>
+          </ul>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-header">
+            <h3>Eco Impact Dashboard</h3>
+            <span>Live Preview</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <h4>128</h4>
+              <p>Total Scans</p>
+            </div>
+            <div class="metric">
+              <h4>82%</h4>
+              <p>Recyclable</p>
+            </div>
+            <div class="metric">
+              <h4>940</h4>
+              <p>Green Points</p>
+            </div>
+          </div>
+
+          <div class="bar-chart">
+            <div class="bar-row">
+              <span>Plastic</span>
+              <div class="bar-bg">
+                <div class="bar-fill plastic-bar"></div>
+              </div>
+            </div>
+
+            <div class="bar-row">
+              <span>Paper</span>
+              <div class="bar-bg">
+                <div class="bar-fill paper-bar"></div>
+              </div>
+            </div>
+
+            <div class="bar-row">
+              <span>Food</span>
+              <div class="bar-bg">
+                <div class="bar-fill food-bar"></div>
+              </div>
+            </div>
+
+            <div class="bar-row">
+              <span>E-waste</span>
+              <div class="bar-bg">
+                <div class="bar-fill ewaste-bar"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="badge-card">
+            🌿 Current Badge: Green Warrior
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT SECTION -->
+    <section class="section impact-section" id="impact">
+      <div class="section-title">
+        <p class="badge">Real-World Impact</p>
+        <h2>Useful for campuses, hostels, schools, and smart cities</h2>
+      </div>
+
+      <div class="impact-grid">
+        <div class="impact-card">
+          <h3>🏫 College Campuses</h3>
+          <p>
+            Students and hostel workers can scan items and learn the correct disposal method.
+          </p>
+        </div>
+
+        <div class="impact-card">
+          <h3>🏢 Offices</h3>
+          <p>
+            Helps employees separate recyclable waste, food waste, and e-waste correctly.
+          </p>
+        </div>
+
+        <div class="impact-card">
+          <h3>🌆 Smart Cities</h3>
+          <p>
+            Can support public awareness campaigns and digital waste management systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2>Ready to try WasteSort AI?</h2>
+      <p>
+        Open the working AI scanner and experience the smart recycling assistant.
+      </p>
+
+      <a
+        href="https://wastesort-ai-smart-recycling.streamlit.app/"
+        target="_blank"
+        class="primary-btn"
+      >
+        Open AI Scanner
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built by Segabandi Prasanna Rani</p>
+    <p>WasteSort AI — Smart Recycling Assistant for a Greener Future</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
